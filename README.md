@@ -1,51 +1,59 @@
+# 🗄️ NIDA for Laravel
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
+Unofficial package for fetching users information based on National ID Number for Laravel applications.
 
-# :package_description
+<br>
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/run-tests?label=tests)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/Check%20&%20fix%20styling?label=code%20style)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-<!--delete-->
----
-This repo can be used to scaffold a Laravel package. Follow these steps to get started:
+## Features 🔎
 
-1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
-3. Have fun creating your package.
-4. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
----
-<!--/delete-->
+- [x] Fetch user information based on National ID Number
+- [ ] Save user information to database (migration and model)
+- [ ] Add command to fetch user information
+- [ ] Add helper function to fetch user information
+- [ ] Add cache to fetch user information
+- [ ] add tests
+
+
+> **Note:** User Image and Signature are currently not supported (Depreciated !!)
+
+<!--
+# This is my package laravel-nida
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/alphaolomi/laravel-nida.svg?style=flat-square)](https://packagist.org/packages/alphaolomi/laravel-nida)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/alphaolomi/laravel-nida/run-tests?label=tests)](https://github.com/alphaolomi/laravel-nida/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/alphaolomi/laravel-nida/Check%20&%20fix%20styling?label=code%20style)](https://github.com/alphaolomi/laravel-nida/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/alphaolomi/laravel-nida.svg?style=flat-square)](https://packagist.org/packages/alphaolomi/laravel-nida)
+
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+ -->
 
-## Support us
+## 📦 Prerequisites 
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/:package_name.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/:package_name)
+- PHP 8.x or higher
+- Laravel 8 or above
+- Composer
+<!-- - Database (if using DB features) () -->
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
+## ⬇️ Installation
 
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
-
-## Installation
-
-You can install the package via composer:
+You can install the package via [composer](https://getcomposer.org/):
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require alphaolomi/laravel-nida
 ```
 
+<!--
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-migrations"
+php artisan vendor:publish --tag="laravel-nida-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-config"
+php artisan vendor:publish --tag="laravel-nida-config"
 ```
 
 This is the contents of the published config file:
@@ -58,14 +66,28 @@ return [
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-views"
-```
+php artisan vendor:publish --tag="laravel-nida-views"
+``` -->
 
-## Usage
+## 🔎  Usage
+
+To fetch user information based on ID Number, you can use the following method:
+
+### 1. Using Facades
 
 ```php
-$variable = new VendorName\Skeleton();
-echo $variable->echoPhrase('Hello, VendorName!');
+use Alphaolomi\LaravelNida\Facades\Nida;
+
+$userData = Nida::getUserData('XXXXXXXXXXXXXXXXXXXX');
+
+echo $userData;
+```
+
+### 2. Using static classes
+
+```php
+$nida = new Alphaolomi\Nida();
+echo $nida->getUserData('XXXXXXXXXXXXXXXXXXXX');
 ```
 
 ## Testing
@@ -78,19 +100,31 @@ composer test
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Contributing
+##  Issues
+
+Are you facing any issue with usage of the package, just [raise an issue]() and I looking to fixing it as soon as I can.
+
+## 🤝 Contributing
 
 Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
 
-## Security Vulnerabilities
+## 🔐 Security Vulnerabilities
 
 Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
-## Credits
+## 👏 Credits
 
-- [:author_name](https://github.com/:author_username)
-- [All Contributors](../../contributors)
+-   [Alpha Olomi](https://github.com/alphaolomi)
+-   [All Contributors](../../contributors)
 
-## License
+## 📝 License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+## Support | Give it a star 🌟
+
+Did you find this repository useful to you ? Well then give it a star so as more people can get to know about it;
+
+## Disclaimers
+
+> This is not an official package. It not endorsed by any organization or individual. Authors are not responsible for any misinformation or misuse of the package of any kind. Author is not responsible for any misuse of the package.

@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Alphaolomi\Nida\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class NidaCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-nida';
 
     public $description = 'My command';
 
