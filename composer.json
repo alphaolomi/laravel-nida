@@ -1,11 +1,12 @@
 {
     "name": "alphaolomi/laravel-nida",
-    "description": "This is my package laravel-nida",
+    "description": "Unofficial package for fetching users information based on National ID Number for Laravel applications.",
     "keywords": [
         "alphaolomi",
         "laravel",
         "laravel-nida",
-        "nida"
+        "nida",
+        "national id number"
     ],
     "homepage": "https://github.com/alphaolomi/laravel-nida",
     "license": "MIT",

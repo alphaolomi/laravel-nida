@@ -1,4 +1,5 @@
-# 🗄️ NIDA for Laravel
+
+# 🗄️ NIDA for Laravel [![Latest Version on Packagist](https://img.shields.io/packagist/v/alphaolomi/laravel-nida?style=flat-square)](https://packagist.org/packages/alphaolomi/laravel-nida) [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/alphaolomi/laravel-nida/run-tests?label=tests)](https://github.com/alphaolomi/laravel-nida/actions?query=workflow%3Arun-tests+branch%3Amain) [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/alphaolomi/laravel-nida/Check%20&%20fix%20styling?label=code%20style)](https://github.com/alphaolomi/laravel-nida/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain) [![Total Downloads](https://img.shields.io/packagist/dt/alphaolomi/laravel-nida.svg?style=flat-square)](https://packagist.org/packages/alphaolomi/laravel-nida)
 
 Unofficial package for fetching users information based on National ID Number for Laravel applications.
 
@@ -19,22 +20,22 @@ Unofficial package for fetching users information based on National ID Number fo
 <!--
 # This is my package laravel-nida
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/alphaolomi/laravel-nida.svg?style=flat-square)](https://packagist.org/packages/alphaolomi/laravel-nida)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/alphaolomi/laravel-nida/run-tests?label=tests)](https://github.com/alphaolomi/laravel-nida/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/alphaolomi/laravel-nida/Check%20&%20fix%20styling?label=code%20style)](https://github.com/alphaolomi/laravel-nida/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/alphaolomi/laravel-nida.svg?style=flat-square)](https://packagist.org/packages/alphaolomi/laravel-nida)
+
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
  -->
+<br>
 
-## 📦 Prerequisites 
+## 📦  Prerequisites 
 
 - PHP 8.x or higher
 - Laravel 8 or above
 - Composer
 <!-- - Database (if using DB features) () -->
 
-## ⬇️ Installation
+<br>
+
+## ⬇️  Installation
 
 You can install the package via [composer](https://getcomposer.org/):
 
@@ -69,6 +70,10 @@ Optionally, you can publish the views using
 php artisan vendor:publish --tag="laravel-nida-views"
 ``` -->
 
+<br>
+
+
+
 ## 🔎  Usage
 
 To fetch user information based on ID Number, you can use the following method:
@@ -96,34 +101,49 @@ echo $nida->getUserData('XXXXXXXXXXXXXXXXXXXX');
 composer test
 ```
 
+<br>
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+<br>
 
 ##  Issues
 
 Are you facing any issue with usage of the package, just [raise an issue]() and I looking to fixing it as soon as I can.
 
+<br>
+
 ## 🤝 Contributing
 
 Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
+
+<br>
 
 ## 🔐 Security Vulnerabilities
 
 Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
+<br>
+
 ## 👏 Credits
 
 -   [Alpha Olomi](https://github.com/alphaolomi)
 -   [All Contributors](../../contributors)
+<br>
 
 ## 📝 License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
+<br>
+
 ## Support | Give it a star 🌟
 
 Did you find this repository useful to you ? Well then give it a star so as more people can get to know about it;
+
+<br>
 
 ## Disclaimers
 
