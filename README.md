@@ -28,7 +28,7 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 
 ## 📦  Prerequisites 
 
-- PHP 8.x or higher
+- PHP 8.0 or higher
 - Laravel 8 or above
 - Composer
 <!-- - Database (if using DB features) () -->
