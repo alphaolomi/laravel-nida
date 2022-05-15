@@ -21,7 +21,7 @@ class Nida
         $this->client = $client;
     }
 
-    public function getRaw(string $nationalId, $params = [])
+    public function getUserData(string $nationalId): array
     {
         if (empty($nationalId)) {
             throw new \Exception('National ID is required.');
@@ -33,11 +33,8 @@ class Nida
 
         $response = $this->client->request('POST', $url, ['headers' => $headers]);
 
-        return   json_decode($response->getBody(), true);
-    }
+        $body = json_decode($response->getBody(), true);
 
-    public function getUserData()
-    {
-        return call_user_func_array("getRaw", func_get_args());
+        return $body["obj"];
     }
 }
