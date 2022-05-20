@@ -81,7 +81,7 @@ To fetch user information based on ID Number, you can use the following method:
 ### 1. Using Facades
 
 ```php
-use Alphaolomi\LaravelNida\Facades\Nida;
+use Alphaolomi\Nida\Facades\Nida;
 
 $userData = Nida::getUserData('XXXXXXXXXXXXXXXXXXXX');
 
@@ -91,7 +91,9 @@ echo $userData;
 ### 2. Using static classes
 
 ```php
-$nida = new Alphaolomi\Nida();
+use Alphaolomi\Nida\Nida;
+
+$nida = new Nida();
 echo $nida->getUserData('XXXXXXXXXXXXXXXXXXXX');
 ```
 
