@@ -16,15 +16,33 @@ class Nida
         return $this->client;
     }
 
+    /**
+     * @param \GuzzleHttp\Client $client
+     * @return Nida
+     */
     public function setClient($client)
     {
         $this->client = $client;
+        return $this;
     }
 
-    public function getUserData(string $nationalId): array
+    /**
+     * Get user data from NIDA.
+     * @param string|int $nationalId
+     * @return array
+     */
+    public function getUserData(string|int $nationalId): array
     {
         if (empty($nationalId)) {
-            throw new \Exception('National ID is required.');
+            throw new \InvalidArgumentException('National ID is required.');
+        }
+
+        if (strlen($nationalId) != 20) {
+            throw new \InvalidArgumentException('National ID must be 20 digits without hyphens.');
+        }
+
+        if (!is_numeric($nationalId)) {
+            throw new \InvalidArgumentException('National ID must be numeric.');
         }
 
         $url = 'https://ors.brela.go.tz/um/load/load_nida/' . $nationalId;
