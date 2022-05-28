@@ -2,6 +2,9 @@
 
 namespace Alphaolomi\Nida;
 
+/** 
+ * Nida class
+*/
 class Nida
 {
     protected $client;
