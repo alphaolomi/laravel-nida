@@ -31,10 +31,10 @@ class Nida
 
     /**
      * Get user data from NIDA.
-     * @param string|int $nationalId
+     * @param string $nationalId
      * @return array
      */
-    public function getUserData(string|int $nationalId): array
+    public function getUserData(string $nationalId): array
     {
         if (empty($nationalId)) {
             throw new \InvalidArgumentException('National ID is required.');
