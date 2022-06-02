@@ -8,6 +8,7 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 
+// use function Pest\Laravel\mock;
 
 it('can instantiate nida class', function () {
     $nida = new Nida();
@@ -29,6 +30,24 @@ it('throws exception if not valid NIN | test empty string', function () {
     $nida->getUserData($nationalId);
 })->throws(\InvalidArgumentException::class);
 
+
+it('throws exception if not valid NIN', function ($nationalId) {
+    $nida = new Nida();
+    $nationalId = '';
+    $nida->getUserData($nationalId);
+})->with([
+    '',
+    '123',
+    '12345678901234567890' // 20
+])->throws(\InvalidArgumentException::class);
+
+
+// test('by mocking NIDA service', function () {
+//     $mock = mock(Nida::class)->expect(
+//         query: fn ($id) => ['NIN' => $id],
+//     );
+//     expect($mock->query('12345678901234567890'))->toBeTruthy();
+// });
 
 it('throws exception if not valid NIN | test string nin', function () {
     $nida = new Nida();
@@ -52,5 +71,26 @@ it('can get user data', function () {
     $nida->setClient($client);
     $res =  $nida->getUserData('19990101151120000226');
     expect($res)->toBeTruthy();
+    $mock->reset();
+});
+
+
+
+it('can get user data 2', function () {
+    $responseStubBody = '{"obj":{"result":{"NIN":"19990101151120000226","FIRSTNAME":"JOHN","MIDDLENAME":"DOE","SURNAME":"MASSAWE","SEX":"MALE","DATEOFBIRTH":"1999-01-01","NATIONALITY":"TANZANIAN"},"_startTotalMemory":40090704,"_end":"2022-05-13T11:33:44.4536599","_start":"2022-05-13T11:33:43.3755342","_endTotalMemory":40726584,"_usedTotalMemory":635880,"error":"","_elapsed":1.072}}';
+    $mock = new MockHandler([
+        new Response(200, [], $responseStubBody),
+    ]);
+
+    $handlerStack = HandlerStack::create($mock);
+    $client = new Client(['handler' => $handlerStack]);
+
+    $nida = new Nida();
+    $nida->setClient($client);
+    $res =  $nida->getUserData('19990101151120000226');
+
+    expect($res)->toBeTruthy();
+    expect(collect([1, 2, 3]))->toBeCollection();
+
     $mock->reset();
 });
