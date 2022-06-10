@@ -2,6 +2,9 @@
 
 namespace Alphaolomi\Nida;
 
+/**
+ * Nida Class
+ */
 class Nida
 {
     protected $client;
@@ -17,10 +20,11 @@ class Nida
     }
 
     /**
+     * Set the Client
      * @param \GuzzleHttp\Client $client
      * @return Nida
      */
-    public function setClient($client)
+    public function setClient($client): Nida
     {
         $this->client = $client;
         return $this;
