@@ -1,5 +1,5 @@
 
-# 🗄️ NIDA for Laravel [![Latest Version on Packagist](https://img.shields.io/packagist/v/alphaolomi/laravel-nida?style=flat-square)](https://packagist.org/packages/alphaolomi/laravel-nida) [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/alphaolomi/laravel-nida/run-tests?label=tests)](https://github.com/alphaolomi/laravel-nida/actions?query=workflow%3Arun-tests+branch%3Amain) [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/alphaolomi/laravel-nida/Check%20&%20fix%20styling?label=code%20style)](https://github.com/alphaolomi/laravel-nida/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain) [![Total Downloads](https://img.shields.io/packagist/dt/alphaolomi/laravel-nida.svg?style=flat-square)](https://packagist.org/packages/alphaolomi/laravel-nida)
+# 🗄️ NIDA for Laravel [![Latest Version on Packagist](https://img.shields.io/packagist/v/alphaolomi/laravel-nida?style=flat-square)](https://packagist.org/packages/alphaolomi/laravel-nida) [![run-tests](https://github.com/alphaolomi/laravel-nida/actions/workflows/run-tests.yml/badge.svg)](https://github.com/alphaolomi/laravel-nida/actions/workflows/run-tests.yml) [![Total Downloads](https://img.shields.io/packagist/dt/alphaolomi/laravel-nida.svg?style=flat-square)](https://packagist.org/packages/alphaolomi/laravel-nida) [![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen.svg)](#)
 
 Unofficial package for fetching users information based on National ID Number for Laravel applications.
 
@@ -12,7 +12,7 @@ Unofficial package for fetching users information based on National ID Number fo
 - [ ] Add command to fetch user information
 - [ ] Add helper function to fetch user information
 - [ ] Add cache to fetch user information
-- [ ] add tests
+- [ ] Add tests
 
 
 > **Note:** User Image and Signature are currently not supported (Depreciated !!)
@@ -113,7 +113,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ##  Issues
 
-Are you facing any issue with usage of the package, just [raise an issue]() and I looking to fixing it as soon as I can.
+Are you facing any issue with usage of the package, just [raise an issue](https://github.com/alphaolomi/laravel-nida/issues/new) and I looking to fixing it as soon as I can.
 
 <br>
 
@@ -141,12 +141,12 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 <br>
 
-## Support | Give it a star 🌟
+## 🌟 Support | Give it a star 
 
-Did you find this repository useful to you ? Well then give it a star so as more people can get to know about it;
+Did you find this repository useful to you ? Give it a star so as more people can get to know about it;
 
 <br>
 
-## Disclaimers
+## ❕ Disclaimers
 
-> This is not an official package. It not endorsed by any organization or individual. Authors are not responsible for any misinformation or misuse of the package of any kind. Author is not responsible for any misuse of the package.
+> This is not an official package. It not endorsed by any organization or individual. Authors are not responsible for any misinformation or misuse of the package of any kind. Author is not responsible for any damages caused by use of the package.
