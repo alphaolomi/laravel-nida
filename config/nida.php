@@ -1,5 +1,5 @@
 <?php
-// config for Alphaolomi/Nida
-return [
 
+return [
+    // ...
 ];
